@@ -1,0 +1,14 @@
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\bin\Debug\netcoreapp2.1\SalesforceCore.deps.json
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\bin\Debug\netcoreapp2.1\SalesforceCore.runtimeconfig.json
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\bin\Debug\netcoreapp2.1\SalesforceCore.runtimeconfig.dev.json
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\bin\Debug\netcoreapp2.1\SalesforceCore.dll
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\bin\Debug\netcoreapp2.1\SalesforceCore.pdb
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.csprojAssemblyReference.cache
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.csproj.CoreCompileInputs.cache
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.RazorAssemblyInfo.cache
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.RazorAssemblyInfo.cs
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.AssemblyInfoInputs.cache
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.AssemblyInfo.cs
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.RazorTargetAssemblyInfo.cache
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.dll
+C:\Users\Gabie and Jeremy\source\repos\SalesforceCore\obj\Debug\netcoreapp2.1\SalesforceCore.pdb
