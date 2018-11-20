@@ -27,6 +27,7 @@ namespace SalesforceCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddDbContext<SalesAppContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("SalesAppContext")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
