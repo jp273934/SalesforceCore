@@ -223,6 +223,28 @@ var ContactsModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Shared/app.routes.ts":
+/*!**************************************!*\
+  !*** ./src/app/Shared/app.routes.ts ***!
+  \**************************************/
+/*! exports provided: routes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
+/* harmony import */ var _Accounts_accounts_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Accounts/accounts.component */ "./src/app/Accounts/accounts.component.ts");
+/* harmony import */ var _Contacts_contacts_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Contacts/contacts.component */ "./src/app/Contacts/contacts.component.ts");
+
+
+var routes = [
+    { path: '', component: _Accounts_accounts_component__WEBPACK_IMPORTED_MODULE_0__["AccountsComponent"] },
+    { path: 'contacts', component: _Contacts_contacts_component__WEBPACK_IMPORTED_MODULE_1__["ContactsComponent"] }
+];
+
+
+/***/ }),
+
 /***/ "./src/app/Shared/data.service.ts":
 /*!****************************************!*\
   !*** ./src/app/Shared/data.service.ts ***!
@@ -282,7 +304,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<contacts></contacts>\n\n"
+module.exports = "<a [routerLink]=\"['./']\">Accounts</a>\n<a [routerLink]=\"['./contacts']\">Contacts</a>\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -339,12 +361,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _Shared_data_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Shared/data.service */ "./src/app/Shared/data.service.ts");
 /* harmony import */ var _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Contacts/contacts.module */ "./src/app/Contacts/contacts.module.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Shared/app.routes */ "./src/app/Shared/app.routes.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -361,7 +387,7 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(_Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__["routes"])
             ],
             providers: [_Shared_data_service__WEBPACK_IMPORTED_MODULE_5__["DataService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
