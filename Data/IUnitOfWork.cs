@@ -6,5 +6,6 @@ namespace SalesforceCore.Data
     public interface IUnitOfWork
     {
          IRepository<Account> accounts { get; set; }
+         IRepository<Contact> contacts { get; set; }
     }
 }
