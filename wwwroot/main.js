@@ -123,6 +123,106 @@ var AccountsModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Contacts/contacts.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/Contacts/contacts.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<table>\r\n    <thead>\r\n        <tr>\r\n            <td>Full Name</td>\r\n            <td>Title</td>\r\n            <td>Email</td>\r\n            <td>Phone</td>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let c of contacts\">\r\n            <td>{{ c.FirstName + c.LastName }}</td>\r\n            <td>{{ c.Title }}</td>\r\n            <td>{{ c.Email }}</td>\r\n            <td>{{ c.PhoneNumber }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
+
+/***/ }),
+
+/***/ "./src/app/Contacts/contacts.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/Contacts/contacts.component.ts ***!
+  \************************************************/
+/*! exports provided: ContactsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactsComponent", function() { return ContactsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _Shared_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/data.service */ "./src/app/Shared/data.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ContactsComponent = /** @class */ (function () {
+    function ContactsComponent(dataService) {
+        this.dataService = dataService;
+    }
+    ContactsComponent.prototype.ngOnInit = function () {
+        this.getContacts();
+    };
+    ContactsComponent.prototype.getContacts = function () {
+        var _this = this;
+        this.dataService.getData('contact').subscribe(function (data) {
+            _this.contacts = data;
+        });
+    };
+    ContactsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'contacts',
+            template: __webpack_require__(/*! ./contacts.component.html */ "./src/app/Contacts/contacts.component.html")
+        }),
+        __metadata("design:paramtypes", [_Shared_data_service__WEBPACK_IMPORTED_MODULE_1__["DataService"]])
+    ], ContactsComponent);
+    return ContactsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Contacts/contacts.module.ts":
+/*!*********************************************!*\
+  !*** ./src/app/Contacts/contacts.module.ts ***!
+  \*********************************************/
+/*! exports provided: ContactsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactsModule", function() { return ContactsModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _contacts_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contacts.component */ "./src/app/Contacts/contacts.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ContactsModule = /** @class */ (function () {
+    function ContactsModule() {
+    }
+    ContactsModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+            declarations: [_contacts_component__WEBPACK_IMPORTED_MODULE_2__["ContactsComponent"]],
+            exports: [_contacts_component__WEBPACK_IMPORTED_MODULE_2__["ContactsComponent"]]
+        })
+    ], ContactsModule);
+    return ContactsModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Shared/data.service.ts":
 /*!****************************************!*\
   !*** ./src/app/Shared/data.service.ts ***!
@@ -182,7 +282,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<accounts></accounts>\n\n"
+module.exports = "<contacts></contacts>\n\n"
 
 /***/ }),
 
@@ -238,12 +338,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Accounts/accounts.module */ "./src/app/Accounts/accounts.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _Shared_data_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Shared/data.service */ "./src/app/Shared/data.service.ts");
+/* harmony import */ var _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Contacts/contacts.module */ "./src/app/Contacts/contacts.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -259,7 +361,7 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"]
             ],
             providers: [_Shared_data_service__WEBPACK_IMPORTED_MODULE_5__["DataService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
