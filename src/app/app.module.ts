@@ -17,7 +17,9 @@ import { OpportunityModule } from './Opportunity/opportunity.module';
     AppComponent
   ],
   imports: [
-    BrowserModule, AccountsModule, HttpClientModule, ContactsModule, RouterModule.forRoot(routes), TasksModule, CampaignsModule, ProjectsModule, OpportunityModule
+    BrowserModule, AccountsModule, HttpClientModule, ContactsModule, 
+    RouterModule.forRoot(routes), TasksModule, CampaignsModule, 
+    ProjectsModule, OpportunityModule
   ],
   providers: [ DataService ],
   bootstrap: [AppComponent]

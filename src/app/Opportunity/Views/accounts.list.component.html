@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="selectedAccount.Name"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+            <div class="radio" *ngFor="let a of accounts">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="{{ a.Id }}">
+                      {{ a.Name }}
+                    </label>
+                  </div>
+    </div>
+</div>
