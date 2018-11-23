@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SalesforceCore.Data;
 
 namespace SalesforceCore.Migrations
 {
     [DbContext(typeof(SalesAppContext))]
-    partial class SalesAppContextModelSnapshot : ModelSnapshot
+    [Migration("20181123014813_TaskTypes")]
+    partial class TaskTypes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

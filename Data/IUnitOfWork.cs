@@ -7,5 +7,6 @@ namespace SalesforceCore.Data
     {
          IRepository<Account> accounts { get; set; }
          IRepository<Contact> contacts { get; set; }
+         IRepository<TaskType> tasktypes { get; set; }
     }
 }

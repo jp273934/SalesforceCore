@@ -8,11 +8,13 @@ namespace SalesforceCore.Data
     {
         public IRepository<Account> accounts { get; set; }
         public IRepository<Contact> contacts { get; set; }
+        public IRepository<TaskType> tasktypes { get; set; }
         
         public UnitOfWork(SalesAppContext context)
         {
              accounts = new Repository<Account>(context);
              contacts = new Repository<Contact>(context);
+             tasktypes = new Repository<TaskType>(context);
         }
     }
 }
