@@ -11,6 +11,7 @@ namespace SalesforceCore.Data
         public IRepository<TaskType> tasktypes { get; set; }
         public IRepository<Task> tasks { get; set; }
         public IRepository<Campaign> campaigns { get; set; }
+        public IRepository<Project> projects { get; set; }
 
         public UnitOfWork(SalesAppContext context)
         {
@@ -19,6 +20,7 @@ namespace SalesforceCore.Data
              tasktypes = new Repository<TaskType>(context);
              tasks = new Repository<Task>(context);
              campaigns = new Repository<Campaign>(context);
+             projects = new Repository<Project>(context);
         }
     }
 }

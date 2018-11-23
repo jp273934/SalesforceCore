@@ -15,5 +15,6 @@ namespace SalesforceCore.Data
         public DbSet<TaskType> TaskTypes { get; set; }
         public DbSet<Task> Tasks { get; set; }
         public DbSet<Campaign> Campaigns { get; set; }
+        public DbSet<Project> Projects { get; set; }
     }
 }

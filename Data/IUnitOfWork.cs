@@ -10,5 +10,6 @@ namespace SalesforceCore.Data
          IRepository<TaskType> tasktypes { get; set; }
          IRepository<Task> tasks { get; set; }
          IRepository<Campaign> campaigns { get; set; }
+         IRepository<Project> projects { get; set; }
     }
 }
