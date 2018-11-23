@@ -123,6 +123,106 @@ var AccountsModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Campaigns/campaigns.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/Campaigns/campaigns.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Campaign</th>\r\n            <th>Coordinator</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let c of campaigns\">\r\n            <td>{{ c.Name }}</td>\r\n            <td>{{ c.Coordinator }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
+
+/***/ }),
+
+/***/ "./src/app/Campaigns/campaigns.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/Campaigns/campaigns.component.ts ***!
+  \**************************************************/
+/*! exports provided: CampaignsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CampaignsComponent", function() { return CampaignsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _Shared_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/data.service */ "./src/app/Shared/data.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CampaignsComponent = /** @class */ (function () {
+    function CampaignsComponent(dataService) {
+        this.dataService = dataService;
+    }
+    CampaignsComponent.prototype.ngOnInit = function () {
+        this.getCampaigns();
+    };
+    CampaignsComponent.prototype.getCampaigns = function () {
+        var _this = this;
+        this.dataService.getData('campaign').subscribe(function (data) {
+            _this.campaigns = data;
+        });
+    };
+    CampaignsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'campaigns',
+            template: __webpack_require__(/*! ./campaigns.component.html */ "./src/app/Campaigns/campaigns.component.html")
+        }),
+        __metadata("design:paramtypes", [_Shared_data_service__WEBPACK_IMPORTED_MODULE_1__["DataService"]])
+    ], CampaignsComponent);
+    return CampaignsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Campaigns/campaigns.module.ts":
+/*!***********************************************!*\
+  !*** ./src/app/Campaigns/campaigns.module.ts ***!
+  \***********************************************/
+/*! exports provided: CampaignsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CampaignsModule", function() { return CampaignsModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _campaigns_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./campaigns.component */ "./src/app/Campaigns/campaigns.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CampaignsModule = /** @class */ (function () {
+    function CampaignsModule() {
+    }
+    CampaignsModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+            declarations: [_campaigns_component__WEBPACK_IMPORTED_MODULE_2__["CampaignsComponent"]],
+            exports: [_campaigns_component__WEBPACK_IMPORTED_MODULE_2__["CampaignsComponent"]]
+        })
+    ], CampaignsModule);
+    return CampaignsModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Contacts/contacts.component.html":
 /*!**************************************************!*\
   !*** ./src/app/Contacts/contacts.component.html ***!
@@ -236,13 +336,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Accounts_accounts_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Accounts/accounts.component */ "./src/app/Accounts/accounts.component.ts");
 /* harmony import */ var _Contacts_contacts_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Contacts/contacts.component */ "./src/app/Contacts/contacts.component.ts");
 /* harmony import */ var _Tasks_tasks_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Tasks/tasks.component */ "./src/app/Tasks/tasks.component.ts");
+/* harmony import */ var _Campaigns_campaigns_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Campaigns/campaigns.component */ "./src/app/Campaigns/campaigns.component.ts");
+
 
 
 
 var routes = [
     { path: '', component: _Accounts_accounts_component__WEBPACK_IMPORTED_MODULE_0__["AccountsComponent"] },
     { path: 'contacts', component: _Contacts_contacts_component__WEBPACK_IMPORTED_MODULE_1__["ContactsComponent"] },
-    { path: 'tasks', component: _Tasks_tasks_component__WEBPACK_IMPORTED_MODULE_2__["TasksComponent"] }
+    { path: 'tasks', component: _Tasks_tasks_component__WEBPACK_IMPORTED_MODULE_2__["TasksComponent"] },
+    { path: 'campaigns', component: _Campaigns_campaigns_component__WEBPACK_IMPORTED_MODULE_3__["CampaignsComponent"] }
 ];
 
 
@@ -391,7 +494,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a [routerLink]=\"['./']\">Accounts</a>\n<a [routerLink]=\"['./contacts']\">Contacts</a>\n<a [routerLink]=\"['./tasks']\">Tasks</a>\n<router-outlet></router-outlet>\n\n"
+module.exports = "<a [routerLink]=\"['./']\">Accounts</a>\n<a [routerLink]=\"['./contacts']\">Contacts</a>\n<a [routerLink]=\"['./tasks']\">Tasks</a>\n<a [routerLink]=\"['./campaigns']\">Campaigns</a>\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -451,12 +554,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Shared/app.routes */ "./src/app/Shared/app.routes.ts");
 /* harmony import */ var _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Tasks/tasks.module */ "./src/app/Tasks/tasks.module.ts");
+/* harmony import */ var _Campaigns_campaigns_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Campaigns/campaigns.module */ "./src/app/Campaigns/campaigns.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -476,7 +581,7 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(_Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__["routes"]), _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__["TasksModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(_Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__["routes"]), _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__["TasksModule"], _Campaigns_campaigns_module__WEBPACK_IMPORTED_MODULE_10__["CampaignsModule"]
             ],
             providers: [_Shared_data_service__WEBPACK_IMPORTED_MODULE_5__["DataService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]

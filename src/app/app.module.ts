@@ -8,13 +8,14 @@ import { ContactsModule } from './Contacts/contacts.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './Shared/app.routes';
 import { TasksModule } from './Tasks/tasks.module';
+import { CampaignsModule } from './Campaigns/campaigns.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, AccountsModule, HttpClientModule, ContactsModule, RouterModule.forRoot(routes), TasksModule
+    BrowserModule, AccountsModule, HttpClientModule, ContactsModule, RouterModule.forRoot(routes), TasksModule, CampaignsModule
   ],
   providers: [ DataService ],
   bootstrap: [AppComponent]
