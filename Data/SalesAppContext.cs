@@ -13,5 +13,6 @@ namespace SalesforceCore.Data
         public DbSet<Account> Accounts { get; set; } 
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<TaskType> TaskTypes { get; set; }
+        public DbSet<Task> Tasks { get; set; }
     }
 }
