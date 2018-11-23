@@ -48,6 +48,7 @@ namespace SalesforceCore
             app.UseMvc();
             app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseAuthentication();
         }
     }
 }

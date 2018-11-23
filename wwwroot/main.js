@@ -323,6 +323,90 @@ var ContactsModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Opportunity/Components/opportunity.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/Opportunity/Components/opportunity.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: OpprotunityComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OpprotunityComponent", function() { return OpprotunityComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var OpprotunityComponent = /** @class */ (function () {
+    function OpprotunityComponent() {
+    }
+    OpprotunityComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'opportunity',
+            template: __webpack_require__(/*! ../Views/opportunity.component.html */ "./src/app/Opportunity/Views/opportunity.component.html")
+        })
+    ], OpprotunityComponent);
+    return OpprotunityComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Opportunity/Views/opportunity.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/Opportunity/Views/opportunity.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Opportunity wizard goes here</h1>"
+
+/***/ }),
+
+/***/ "./src/app/Opportunity/opportunity.module.ts":
+/*!***************************************************!*\
+  !*** ./src/app/Opportunity/opportunity.module.ts ***!
+  \***************************************************/
+/*! exports provided: OpportunityModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OpportunityModule", function() { return OpportunityModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _Components_opportunity_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Components/opportunity.component */ "./src/app/Opportunity/Components/opportunity.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var OpportunityModule = /** @class */ (function () {
+    function OpportunityModule() {
+    }
+    OpportunityModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+            declarations: [_Components_opportunity_component__WEBPACK_IMPORTED_MODULE_2__["OpprotunityComponent"]],
+            exports: [_Components_opportunity_component__WEBPACK_IMPORTED_MODULE_2__["OpprotunityComponent"]]
+        })
+    ], OpportunityModule);
+    return OpportunityModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Projects/projects.component.html":
 /*!**************************************************!*\
   !*** ./src/app/Projects/projects.component.html ***!
@@ -438,6 +522,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Tasks_tasks_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Tasks/tasks.component */ "./src/app/Tasks/tasks.component.ts");
 /* harmony import */ var _Campaigns_campaigns_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Campaigns/campaigns.component */ "./src/app/Campaigns/campaigns.component.ts");
 /* harmony import */ var _Projects_projects_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Projects/projects.component */ "./src/app/Projects/projects.component.ts");
+/* harmony import */ var _Opportunity_Components_opportunity_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Opportunity/Components/opportunity.component */ "./src/app/Opportunity/Components/opportunity.component.ts");
+
 
 
 
@@ -448,7 +534,8 @@ var routes = [
     { path: 'contacts', component: _Contacts_contacts_component__WEBPACK_IMPORTED_MODULE_1__["ContactsComponent"] },
     { path: 'tasks', component: _Tasks_tasks_component__WEBPACK_IMPORTED_MODULE_2__["TasksComponent"] },
     { path: 'campaigns', component: _Campaigns_campaigns_component__WEBPACK_IMPORTED_MODULE_3__["CampaignsComponent"] },
-    { path: 'projects', component: _Projects_projects_component__WEBPACK_IMPORTED_MODULE_4__["ProjectsComponent"] }
+    { path: 'projects', component: _Projects_projects_component__WEBPACK_IMPORTED_MODULE_4__["ProjectsComponent"] },
+    { path: 'opportunity', component: _Opportunity_Components_opportunity_component__WEBPACK_IMPORTED_MODULE_5__["OpprotunityComponent"] }
 ];
 
 
@@ -597,7 +684,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-info\">\n    <a class=\"navbar-brand\" [routerLink]=\"['./']\">Sales App</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n        aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['./']\">Accounts <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./contacts']\">Contacts</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./tasks']\">Tasks</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./projects']\">Projects</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./campaigns']\">Campaigns</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-info\">\n    <a class=\"navbar-brand\" [routerLink]=\"['./']\">Sales App</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n        aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['./']\">Accounts <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./contacts']\">Contacts</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./tasks']\">Tasks</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./projects']\">Projects</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./campaigns']\">Campaigns</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./opportunity']\">Opportunity</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -659,12 +746,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Tasks/tasks.module */ "./src/app/Tasks/tasks.module.ts");
 /* harmony import */ var _Campaigns_campaigns_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Campaigns/campaigns.module */ "./src/app/Campaigns/campaigns.module.ts");
 /* harmony import */ var _Projects_projects_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Projects/projects.module */ "./src/app/Projects/projects.module.ts");
+/* harmony import */ var _Opportunity_opportunity_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Opportunity/opportunity.module */ "./src/app/Opportunity/opportunity.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -686,7 +775,7 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(_Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__["routes"]), _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__["TasksModule"], _Campaigns_campaigns_module__WEBPACK_IMPORTED_MODULE_10__["CampaignsModule"], _Projects_projects_module__WEBPACK_IMPORTED_MODULE_11__["ProjectsModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(_Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__["routes"]), _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__["TasksModule"], _Campaigns_campaigns_module__WEBPACK_IMPORTED_MODULE_10__["CampaignsModule"], _Projects_projects_module__WEBPACK_IMPORTED_MODULE_11__["ProjectsModule"], _Opportunity_opportunity_module__WEBPACK_IMPORTED_MODULE_12__["OpportunityModule"]
             ],
             providers: [_Shared_data_service__WEBPACK_IMPORTED_MODULE_5__["DataService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
