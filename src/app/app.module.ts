@@ -7,13 +7,14 @@ import { DataService } from './Shared/data.service';
 import { ContactsModule } from './Contacts/contacts.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './Shared/app.routes';
+import { TasksModule } from './Tasks/tasks.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, AccountsModule, HttpClientModule, ContactsModule, RouterModule.forRoot(routes)
+    BrowserModule, AccountsModule, HttpClientModule, ContactsModule, RouterModule.forRoot(routes), TasksModule
   ],
   providers: [ DataService ],
   bootstrap: [AppComponent]
