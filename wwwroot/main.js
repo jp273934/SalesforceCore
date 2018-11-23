@@ -323,6 +323,106 @@ var ContactsModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/Projects/projects.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/Projects/projects.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n        <div class=\"card\">\r\n            <div class=\"card-body\">\r\n                <h5 class=\"card-title\">Projects</h5>\r\n                <table class=\"table\">\r\n                    <thead>\r\n                        <tr>\r\n                            <th>Project</th>\r\n                            <th>Type</th>\r\n                            <th>Customer Needs By</th>\r\n                        </tr>\r\n                    </thead>\r\n                </table>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/Projects/projects.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/Projects/projects.component.ts ***!
+  \************************************************/
+/*! exports provided: ProjectsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function() { return ProjectsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _Shared_data_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/data.service */ "./src/app/Shared/data.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ProjectsComponent = /** @class */ (function () {
+    function ProjectsComponent(dataService) {
+        this.dataService = dataService;
+    }
+    ProjectsComponent.prototype.ngOnInit = function () {
+        this.getProjects();
+    };
+    ProjectsComponent.prototype.getProjects = function () {
+        var _this = this;
+        this.dataService.getData('project').subscribe(function (data) {
+            _this.projects = data;
+        });
+    };
+    ProjectsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'projects',
+            template: __webpack_require__(/*! ./projects.component.html */ "./src/app/Projects/projects.component.html")
+        }),
+        __metadata("design:paramtypes", [_Shared_data_service__WEBPACK_IMPORTED_MODULE_1__["DataService"]])
+    ], ProjectsComponent);
+    return ProjectsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Projects/projects.module.ts":
+/*!*********************************************!*\
+  !*** ./src/app/Projects/projects.module.ts ***!
+  \*********************************************/
+/*! exports provided: ProjectsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsModule", function() { return ProjectsModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _projects_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects.component */ "./src/app/Projects/projects.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ProjectsModule = /** @class */ (function () {
+    function ProjectsModule() {
+    }
+    ProjectsModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]],
+            declarations: [_projects_component__WEBPACK_IMPORTED_MODULE_1__["ProjectsComponent"]],
+            exports: [_projects_component__WEBPACK_IMPORTED_MODULE_1__["ProjectsComponent"]]
+        })
+    ], ProjectsModule);
+    return ProjectsModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/Shared/app.routes.ts":
 /*!**************************************!*\
   !*** ./src/app/Shared/app.routes.ts ***!
@@ -337,6 +437,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Contacts_contacts_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Contacts/contacts.component */ "./src/app/Contacts/contacts.component.ts");
 /* harmony import */ var _Tasks_tasks_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Tasks/tasks.component */ "./src/app/Tasks/tasks.component.ts");
 /* harmony import */ var _Campaigns_campaigns_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Campaigns/campaigns.component */ "./src/app/Campaigns/campaigns.component.ts");
+/* harmony import */ var _Projects_projects_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Projects/projects.component */ "./src/app/Projects/projects.component.ts");
+
 
 
 
@@ -345,7 +447,8 @@ var routes = [
     { path: '', component: _Accounts_accounts_component__WEBPACK_IMPORTED_MODULE_0__["AccountsComponent"] },
     { path: 'contacts', component: _Contacts_contacts_component__WEBPACK_IMPORTED_MODULE_1__["ContactsComponent"] },
     { path: 'tasks', component: _Tasks_tasks_component__WEBPACK_IMPORTED_MODULE_2__["TasksComponent"] },
-    { path: 'campaigns', component: _Campaigns_campaigns_component__WEBPACK_IMPORTED_MODULE_3__["CampaignsComponent"] }
+    { path: 'campaigns', component: _Campaigns_campaigns_component__WEBPACK_IMPORTED_MODULE_3__["CampaignsComponent"] },
+    { path: 'projects', component: _Projects_projects_component__WEBPACK_IMPORTED_MODULE_4__["ProjectsComponent"] }
 ];
 
 
@@ -494,7 +597,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-info\">\n    <a class=\"navbar-brand\" [routerLink]=\"['./']\">Sales App</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n        aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['./']\">Accounts <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./contacts']\">Contacts</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./tasks']\">Tasks</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./campaigns']\">Campaigns</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-info\">\n    <a class=\"navbar-brand\" [routerLink]=\"['./']\">Sales App</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n        aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['./']\">Accounts <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./contacts']\">Contacts</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./tasks']\">Tasks</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./projects']\">Projects</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./campaigns']\">Campaigns</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -555,12 +658,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Shared/app.routes */ "./src/app/Shared/app.routes.ts");
 /* harmony import */ var _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Tasks/tasks.module */ "./src/app/Tasks/tasks.module.ts");
 /* harmony import */ var _Campaigns_campaigns_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Campaigns/campaigns.module */ "./src/app/Campaigns/campaigns.module.ts");
+/* harmony import */ var _Projects_projects_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Projects/projects.module */ "./src/app/Projects/projects.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -581,7 +686,7 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(_Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__["routes"]), _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__["TasksModule"], _Campaigns_campaigns_module__WEBPACK_IMPORTED_MODULE_10__["CampaignsModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _Accounts_accounts_module__WEBPACK_IMPORTED_MODULE_3__["AccountsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _Contacts_contacts_module__WEBPACK_IMPORTED_MODULE_6__["ContactsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"].forRoot(_Shared_app_routes__WEBPACK_IMPORTED_MODULE_8__["routes"]), _Tasks_tasks_module__WEBPACK_IMPORTED_MODULE_9__["TasksModule"], _Campaigns_campaigns_module__WEBPACK_IMPORTED_MODULE_10__["CampaignsModule"], _Projects_projects_module__WEBPACK_IMPORTED_MODULE_11__["ProjectsModule"]
             ],
             providers: [_Shared_data_service__WEBPACK_IMPORTED_MODULE_5__["DataService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]

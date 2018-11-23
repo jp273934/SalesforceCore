@@ -9,13 +9,14 @@ import { RouterModule } from '@angular/router';
 import { routes } from './Shared/app.routes';
 import { TasksModule } from './Tasks/tasks.module';
 import { CampaignsModule } from './Campaigns/campaigns.module';
+import { ProjectsModule } from './Projects/projects.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, AccountsModule, HttpClientModule, ContactsModule, RouterModule.forRoot(routes), TasksModule, CampaignsModule
+    BrowserModule, AccountsModule, HttpClientModule, ContactsModule, RouterModule.forRoot(routes), TasksModule, CampaignsModule, ProjectsModule
   ],
   providers: [ DataService ],
   bootstrap: [AppComponent]
