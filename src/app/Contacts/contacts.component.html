@@ -1,18 +1,27 @@
-<table>
-    <thead>
-        <tr>
-            <td>Full Name</td>
-            <td>Title</td>
-            <td>Email</td>
-            <td>Phone</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let c of contacts">
-            <td>{{ c.FirstName + c.LastName }}</td>
-            <td>{{ c.Title }}</td>
-            <td>{{ c.Email }}</td>
-            <td>{{ c.PhoneNumber }}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contacts</h5>
+                    <table class="table">
+                            <thead>
+                                <tr>
+                                    <td>Full Name</td>
+                                    <td>Title</td>
+                                    <td>Email</td>
+                                    <td>Phone</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let c of contacts">
+                                    <td>{{ c.FirstName + c.LastName }}</td>
+                                    <td>{{ c.Title }}</td>
+                                    <td>{{ c.Email }}</td>
+                                    <td>{{ c.PhoneNumber }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>        
+        </div>
+    </div>

@@ -1,14 +1,23 @@
-<table>
-    <thead>
-        <tr>
-            <th>Account</th>
-            <th>Type</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let a of accounts">
-             <td>{{ a.Name }}</td>
-             <td>{{ a.Type }}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Accounts</h5>
+                <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Account</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let a of accounts">
+                                <td>{{ a.Name }}</td>
+                                <td>{{ a.Type }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>        
+    </div>
+</div>

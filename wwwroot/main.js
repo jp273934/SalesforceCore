@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Account</th>\r\n            <th>Type</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let a of accounts\">\r\n             <td>{{ a.Name }}</td>\r\n             <td>{{ a.Type }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n        <div class=\"card\">\r\n            <div class=\"card-body\">\r\n                <h5 class=\"card-title\">Accounts</h5>\r\n                <table class=\"table\">\r\n                        <thead>\r\n                            <tr>\r\n                                <th>Account</th>\r\n                                <th>Type</th>\r\n                            </tr>\r\n                        </thead>\r\n                        <tbody>\r\n                            <tr *ngFor=\"let a of accounts\">\r\n                                <td>{{ a.Name }}</td>\r\n                                <td>{{ a.Type }}</td>\r\n                            </tr>\r\n                        </tbody>\r\n                    </table>\r\n            </div>\r\n        </div>        \r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -130,7 +130,7 @@ var AccountsModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table>\r\n    <thead>\r\n        <tr>\r\n            <th>Campaign</th>\r\n            <th>Coordinator</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let c of campaigns\">\r\n            <td>{{ c.Name }}</td>\r\n            <td>{{ c.Coordinator }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
+module.exports = "<div class=\"row\">\r\n        <div class=\"col-sm-12\">\r\n            <div class=\"card\">\r\n                <div class=\"card-body\">\r\n                    <h5 class=\"card-title\">Campaigns</h5>\r\n                    <table class=\"table\">\r\n                            <thead>\r\n                                <tr>\r\n                                    <th>Campaign</th>\r\n                                    <th>Coordinator</th>\r\n                                </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <tr *ngFor=\"let c of campaigns\">\r\n                                    <td>{{ c.Name }}</td>\r\n                                    <td>{{ c.Coordinator }}</td>\r\n                                </tr>\r\n                            </tbody>\r\n                        </table>\r\n                </div>\r\n            </div>        \r\n        </div>\r\n    </div>\r\n"
 
 /***/ }),
 
@@ -230,7 +230,7 @@ var CampaignsModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table>\r\n    <thead>\r\n        <tr>\r\n            <td>Full Name</td>\r\n            <td>Title</td>\r\n            <td>Email</td>\r\n            <td>Phone</td>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let c of contacts\">\r\n            <td>{{ c.FirstName + c.LastName }}</td>\r\n            <td>{{ c.Title }}</td>\r\n            <td>{{ c.Email }}</td>\r\n            <td>{{ c.PhoneNumber }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
+module.exports = "<div class=\"row\">\r\n        <div class=\"col-sm-12\">\r\n            <div class=\"card\">\r\n                <div class=\"card-body\">\r\n                    <h5 class=\"card-title\">Contacts</h5>\r\n                    <table class=\"table\">\r\n                            <thead>\r\n                                <tr>\r\n                                    <td>Full Name</td>\r\n                                    <td>Title</td>\r\n                                    <td>Email</td>\r\n                                    <td>Phone</td>\r\n                                </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <tr *ngFor=\"let c of contacts\">\r\n                                    <td>{{ c.FirstName + c.LastName }}</td>\r\n                                    <td>{{ c.Title }}</td>\r\n                                    <td>{{ c.Email }}</td>\r\n                                    <td>{{ c.PhoneNumber }}</td>\r\n                                </tr>\r\n                            </tbody>\r\n                        </table>\r\n                </div>\r\n            </div>        \r\n        </div>\r\n    </div>\r\n"
 
 /***/ }),
 
@@ -494,7 +494,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a [routerLink]=\"['./']\">Accounts</a>\n<a [routerLink]=\"['./contacts']\">Contacts</a>\n<a [routerLink]=\"['./tasks']\">Tasks</a>\n<a [routerLink]=\"['./campaigns']\">Campaigns</a>\n<router-outlet></router-outlet>\n\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-info\">\n    <a class=\"navbar-brand\" [routerLink]=\"['./']\">Sales App</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n        aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item active\">\n                <a class=\"nav-link\" [routerLink]=\"['./']\">Accounts <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./contacts']\">Contacts</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./tasks']\">Tasks</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" [routerLink]=\"['./campaigns']\">Campaigns</a>\n            </li>\n        </ul>\n    </div>\n</nav>\n<div class=\"container\">\n    <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
