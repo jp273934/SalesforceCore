@@ -9,9 +9,11 @@ import { AccountService } from "src/app/Accounts/accounts.service";
 
 export class OpprotunityComponent { 
     public account : IAccount;
+    public stepIndex : number;
 
     constructor(private accountService : AccountService) 
     {
         this.account = accountService.getDefaultAccount();
+        this.stepIndex = 1;
     }
 }

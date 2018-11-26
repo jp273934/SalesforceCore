@@ -3,7 +3,8 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Opportunity</h5>
-                <accounts-list [selectedAccount]="account"></accounts-list>
+                <type *ngIf="stepIndex == 1"></type>
+                <accounts-list [selectedAccount]="account" *ngIf="stepIndex == 2"></accounts-list>
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-outline-secondary">Previous</button>

@@ -438,6 +438,7 @@ var OpprotunityComponent = /** @class */ (function () {
     function OpprotunityComponent(accountService) {
         this.accountService = accountService;
         this.account = accountService.getDefaultAccount();
+        this.stepIndex = 1;
     }
     OpprotunityComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -447,6 +448,40 @@ var OpprotunityComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [src_app_Accounts_accounts_service__WEBPACK_IMPORTED_MODULE_1__["AccountService"]])
     ], OpprotunityComponent);
     return OpprotunityComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/Opportunity/Components/type.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/Opportunity/Components/type.component.ts ***!
+  \**********************************************************/
+/*! exports provided: TypeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TypeComponent", function() { return TypeComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var TypeComponent = /** @class */ (function () {
+    function TypeComponent() {
+    }
+    TypeComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'type',
+            template: __webpack_require__(/*! ../Views/type.component.html */ "./src/app/Opportunity/Views/type.component.html")
+        })
+    ], TypeComponent);
+    return TypeComponent;
 }());
 
 
@@ -471,7 +506,18 @@ module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-6\">\r\n       
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n        <div class=\"card\">\r\n            <div class=\"card-body\">\r\n                <h5 class=\"card-title\">Opportunity</h5>\r\n                <accounts-list [selectedAccount]=\"account\"></accounts-list>\r\n            </div>\r\n            <div class=\"card-footer\">\r\n                <button type=\"button\" class=\"btn btn-outline-secondary\">Previous</button>\r\n                <button type=\"button\" class=\"btn btn-outline-primary float-right\">Next</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n        <div class=\"card\">\r\n            <div class=\"card-body\">\r\n                <h5 class=\"card-title\">Opportunity</h5>\r\n                <type *ngIf=\"stepIndex == 1\"></type>\r\n                <accounts-list [selectedAccount]=\"account\" *ngIf=\"stepIndex == 2\"></accounts-list>\r\n            </div>\r\n            <div class=\"card-footer\">\r\n                <button type=\"button\" class=\"btn btn-outline-secondary\">Previous</button>\r\n                <button type=\"button\" class=\"btn btn-outline-primary float-right\">Next</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/Opportunity/Views/type.component.html":
+/*!*******************************************************!*\
+  !*** ./src/app/Opportunity/Views/type.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"form-check\">\r\n        <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\r\n        <label class=\"form-check-label\" for=\"exampleRadios1\">\r\n          Project\r\n        </label>\r\n      </div>\r\n      <div class=\"form-check\">\r\n        <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\r\n        <label class=\"form-check-label\" for=\"exampleRadios2\">\r\n          Prospect\r\n        </label>\r\n      </div>"
 
 /***/ }),
 
@@ -491,6 +537,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_opportunity_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/opportunity.component */ "./src/app/Opportunity/Components/opportunity.component.ts");
 /* harmony import */ var _Components_accounts_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/accounts.list.component */ "./src/app/Opportunity/Components/accounts.list.component.ts");
 /* harmony import */ var _Accounts_accounts_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Accounts/accounts.service */ "./src/app/Accounts/accounts.service.ts");
+/* harmony import */ var _Components_type_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Components/type.component */ "./src/app/Opportunity/Components/type.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -503,13 +550,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var OpportunityModule = /** @class */ (function () {
     function OpportunityModule() {
     }
     OpportunityModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormsModule"]],
-            declarations: [_Components_opportunity_component__WEBPACK_IMPORTED_MODULE_3__["OpprotunityComponent"], _Components_accounts_list_component__WEBPACK_IMPORTED_MODULE_4__["AccountsListComponent"]],
+            declarations: [_Components_opportunity_component__WEBPACK_IMPORTED_MODULE_3__["OpprotunityComponent"], _Components_accounts_list_component__WEBPACK_IMPORTED_MODULE_4__["AccountsListComponent"], _Components_type_component__WEBPACK_IMPORTED_MODULE_6__["TypeComponent"]],
             exports: [_Components_opportunity_component__WEBPACK_IMPORTED_MODULE_3__["OpprotunityComponent"]],
             providers: [_Accounts_accounts_service__WEBPACK_IMPORTED_MODULE_5__["AccountService"]]
         })
